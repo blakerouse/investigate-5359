@@ -1,0 +1,10 @@
+filebeat.inputs:
+- type: filestream
+  id: my-filestream-id
+  paths:
+    - logs/*.log
+output.file:
+  path: "."
+  filename: "events"
+  rotate_every_kb: 500000000000000
+  number_of_files: 1024
